@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+}
+
+header, nav, article, footer{
+    padding: 20px;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(4, fr1);
+    grid-template-rows: 100px 500px 100px;
+    grid-gap: 10px;
+    grid-template-areas:
+    "h h h h h h h h h . . ."
+    "m m m c c c c c c c c c"
+    "r r r r r r r r r r r r"
+    ;
+}
+
+header{
+    background-color:blue;
+    color: white;
+    grid-area: h;
+}
+
+nav{
+    background-color: aqua;
+    grid-area: m;
+}
+
+article{
+    background-color: lightblue;
+    grid-area: c;
+}
+
+footer{
+    background-color: lightskyblue;
+    grid-area: r;
+}
